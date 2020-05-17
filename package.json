@@ -1,6 +1,6 @@
 {
   "name": "ng-cil-tab",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,6 +11,11 @@
     "packagr": "ng-packagr -p ng-package.json"
   },
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amusitelang/ng-cil-tab"
+  },
+  "homepage": "https://github.com/amusitelang/ng-cil-tab",
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.6",
     "@angular/cli": "~9.1.6",

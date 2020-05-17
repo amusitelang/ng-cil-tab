@@ -1,0 +1,35 @@
+.cil-tab-wrapper {
+  .tab-box {
+    width: 100%;
+    border-top: 1px solid #EEEEEE;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .tab-icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto 5px;
+  }
+  .tab>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .name {
+    color: #1E1E1E;
+    font-size: 12px;
+    transform: scale(0.8);
+    margin: 0 auto;
+  }
+  .selected>.tab-icon {
+  }
+  .selected>.name {
+    color: #FF891B;
+    font-weight:400;
+  }
+}

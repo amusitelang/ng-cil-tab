@@ -1,0 +1,10 @@
+<div class="cil-tab-wrapper">
+  <div class="tab-box" [style]="{'z-index': zIndex, 'background': background}">
+    <div class="tab" [class]="{'selected': defaultSelected === i + 1}" *ngFor="let item of urlList; index as i" (click)="handleGo(item)">
+      <div class="tab-icon">
+        <img [src]="item.icon" alt="">
+      </div>
+      <div class="name">{{item.name}}</div>
+    </div>
+  </div>
+</div>

@@ -48,9 +48,28 @@ export class CilLxTabComponent implements OnInit {
         name: 'Membership'
       }
     ];
+    let iconArr = [home, coupon, pointMall, delivery, menbership];
+    switch (this.defaultSelected - 1) {
+      case 0:
+        iconArr = [homeed, coupon, pointMall, delivery, menbership];
+        break;
+      case 1:
+        iconArr = [home, couponed, pointMall, delivery, menbership];
+        break;
+      case 2:
+        iconArr = [home, coupon, pointMalled, delivery, menbership];
+        break;
+      case 3:
+        iconArr = [home, coupon, pointMall, deliveryed, menbership];
+        break;
+      case 4:
+        iconArr = [home, coupon, pointMall, delivery, menbershiped];
+        break;
+    }
     for (var i  = 0; i< arr.length; i++) {
       if (typeof arr[i] === 'string') {
-        arr1[i]['url'] = arr[i]
+        arr1[i]['url'] = arr[i];
+        arr1[i]['icon'] = iconArr[i];
       } else if (typeof arr[i] === 'object') {
         if (arr[i]['url']) {
           arr1[i]['url'] = arr[i]['url'];
@@ -58,6 +77,7 @@ export class CilLxTabComponent implements OnInit {
 
         if (arr[i]['icon']) {
           arr1[i]['icon'] = arr[i]['icon'];
+          iconArr[i] = arr[i]['icon'];
         }
 
         if (arr[i]['name']) {
@@ -66,10 +86,6 @@ export class CilLxTabComponent implements OnInit {
       } else {
         arr1[i] = arr[i];
       }
-    }
-    let iconList = [homeed, couponed, pointMalled, deliveryed, menbershiped];
-    if (this.defaultSelected) {
-      arr1[this.defaultSelected - 1]['icon'] = iconList[this.defaultSelected - 1]
     }
     this.urlList = arr1;
   }

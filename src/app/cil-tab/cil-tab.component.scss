@@ -9,11 +9,18 @@
     position: fixed;
     bottom: 0;
     left: 0;
+    height: 65px;
+    overflow: hidden;
+  }
+  .tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .tab-icon {
     width: 25px;
     height: 25px;
-    margin: 0 auto 5px;
+    margin: 0 auto;
   }
   .tab>img {
     display: block;

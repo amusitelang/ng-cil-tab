@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { coupon, couponed,  pointMall, pointMalled, home, homeed, delivery, deliveryed, menbership, menbershiped } from './cil-tab.data';
 
 
@@ -7,7 +7,7 @@ import { coupon, couponed,  pointMall, pointMalled, home, homeed, delivery, deli
   templateUrl: './cil-tab.component.html',
   styleUrls: ['./cil-tab.component.scss']
 })
-export class CilLxTabComponent implements OnInit {
+export class CilLxTabComponent implements OnChanges {
   @Input() zIndex: number = 99999;
   @Input() background: string = '#ffffff';
   @Input() defaultSelected: number = 1;
@@ -17,8 +17,13 @@ export class CilLxTabComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(): void {
     this.defaultData();
   }
+
+
   defaultData() {
     let arr = this.baseUrl;
     let arr1 = [
@@ -78,6 +83,8 @@ export class CilLxTabComponent implements OnInit {
         if (arr[i]['icon']) {
           arr1[i]['icon'] = arr[i]['icon'];
           iconArr[i] = arr[i]['icon'];
+        } else {
+          arr1[i]['icon'] = iconArr[i];
         }
 
         if (arr[i]['name']) {

@@ -1,6 +1,6 @@
 {
   "name": "ng-cil-tab",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

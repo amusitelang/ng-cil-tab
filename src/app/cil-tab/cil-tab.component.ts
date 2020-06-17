@@ -99,7 +99,7 @@ export class CilLxTabComponent implements OnChanges {
 
   handleGo(item) {
     if (location.href === item.url) {
-      history.go(0);
+      location.reload(true)
       return;
     }
     if (this.location === 'push') {
